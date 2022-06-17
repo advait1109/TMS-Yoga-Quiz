@@ -166,9 +166,10 @@ function ans7r(){
         synth.speak(utterThis);
         setTimeout('', 600);
         document.getElementById("div_1").hidden="true";
-        document.getElementById("me").hidden="false";
+        document.getElementById("title_welcome").innerHTML="Congratulation!"+" Your Score is "+score;
         synth=window.speechSynthesis;
-    utterThis=new SpeechSynthesisUtterance("Thank You Have a healthy day! Devloped By Advait Patel Class 7th A TMS");
+        utterThis=new SpeechSynthesisUtterance("Thank You Have a healthy day! Devloped By Advait Patel Class 7th A TMS");
+        console.log("Success")
         synth.speak(utterThis);
         score+=1;
         document.getElementById("score").innerHTML="Score: "+score;
