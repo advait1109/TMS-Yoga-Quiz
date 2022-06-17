@@ -1,12 +1,7 @@
+score=0;
 function start_it(){
     document.getElementById("div_1").hidden=false;
     document.getElementById("hide_it").hidden=true;
-    var hour=now.getHours();
-var mintues=now.getMinutes();
-if (hour >= 8 && hour <= 11 && mintues >= 0) { 
-    document.getElementById("div_1").hidden=false;
-    document.getElementById("hide_it").hidden=true;
-}
 }
 function ans1r(){
     synth=window.speechSynthesis;
@@ -23,13 +18,16 @@ function ans1r(){
         document.getElementById("op2b").setAttribute( "onClick", "javascript: ans2w();" );
         document.getElementById("op3b").setAttribute( "onClick", "javascript: ans2w();" );
         document.getElementById("op4b").setAttribute( "onClick", "javascript: ans2r();" );
+        score+=1;
+        document.getElementById("score").innerHTML="Score: "+score;
 }
     
 function ans1w(){
     synth=window.speechSynthesis;
     utterThis=new SpeechSynthesisUtterance("O! O! Try Again");
         synth.speak(utterThis);
-
+        score-=1;
+        document.getElementById("score").innerHTML="Score: "+score;
 }
 function ans2r(){
     synth=window.speechSynthesis;
@@ -46,14 +44,16 @@ function ans2r(){
         document.getElementById("op2b").setAttribute( "onClick", "javascript: ans3w();" );
         document.getElementById("op3b").setAttribute( "onClick", "javascript: ans3w();" );
         document.getElementById("op4b").setAttribute( "onClick", "javascript: ans3w();" );
-        console.log("done");
+        score+=1;
+        document.getElementById("score").innerHTML="Score: "+score;
 }
     
 function ans2w(){
     synth=window.speechSynthesis;
     utterThis=new SpeechSynthesisUtterance("O! O! Try Again");
         synth.speak(utterThis);
-
+        score-=1;
+        document.getElementById("score").innerHTML="Score: "+score;
 }
 function ans3r(){
     synth=window.speechSynthesis;
@@ -70,16 +70,97 @@ function ans3r(){
         document.getElementById("op2b").setAttribute( "onClick", "javascript: ans4r();" );
         document.getElementById("op3b").setAttribute( "onClick", "javascript: ans4w();" );
         document.getElementById("op4b").setAttribute( "onClick", "javascript: ans4w();" );
-        console.log("done");
+        score+=1;
+        document.getElementById("score").innerHTML="Score: "+score;
 }
     
 function ans3w(){
     synth=window.speechSynthesis;
     utterThis=new SpeechSynthesisUtterance("O! O! Try Again");
         synth.speak(utterThis);
-
+        score+=1;
+        document.getElementById("score").innerHTML="Score: "+score;
 }
 function ans4r(){
+    synth=window.speechSynthesis;
+    utterThis=new SpeechSynthesisUtterance("Correct");
+        synth.speak(utterThis);
+        setTimeout('', 1200000);
+        document.getElementById("op1t").innerHTML="18 June";
+        document.getElementById("op2t").innerHTML="21 June";
+        document.getElementById("op3t").innerHTML="20 June";
+        document.getElementById("op4t").innerHTML="21 July";
+        document.getElementById("quiz_q_text").innerHTML="Which day is celebrated as 'International Yoga Day'?";
+        document.getElementById("image").hidden="true";
+        document.getElementById("op1b").setAttribute( "onClick", "javascript: ans5w();" );
+        document.getElementById("op2b").setAttribute( "onClick", "javascript: ans5r();" );
+        document.getElementById("op3b").setAttribute( "onClick", "javascript: ans5w();" );
+        document.getElementById("op4b").setAttribute( "onClick", "javascript: ans5w();" );
+        score+=1;
+        document.getElementById("score").innerHTML="Score: "+score;
+}
+    
+function ans4w(){
+    synth=window.speechSynthesis;
+    utterThis=new SpeechSynthesisUtterance("O! O! Try Again");
+        synth.speak(utterThis);
+        score-=1;
+        document.getElementById("score").innerHTML="Score: "+score;
+}
+function ans5r(){
+    synth=window.speechSynthesis;
+    utterThis=new SpeechSynthesisUtterance("Correct");
+        synth.speak(utterThis);
+        setTimeout('', 1200000);
+        document.getElementById("op1t").innerHTML="Deffussion";
+        document.getElementById("op2t").innerHTML="Union";
+        document.getElementById("op3t").innerHTML="Breaking into two part";
+        document.getElementById("op4t").innerHTML="Surya Namaskar";
+        document.getElementById("quiz_q_text").innerHTML="Yoga is derived from a sanskrit word meaning?";
+        document.getElementById("image").hidden="true";
+        document.getElementById("op1b").setAttribute( "onClick", "javascript: ans6w();" );
+        document.getElementById("op2b").setAttribute( "onClick", "javascript: ans6r();" );
+        document.getElementById("op3b").setAttribute( "onClick", "javascript: ans6w();" );
+        document.getElementById("op4b").setAttribute( "onClick", "javascript: ans6w();" );
+        score+=1;
+        document.getElementById("score").innerHTML="Score: "+score;
+}
+    
+function ans5w(){
+    synth=window.speechSynthesis;
+    utterThis=new SpeechSynthesisUtterance("O! O! Try Again");
+        synth.speak(utterThis);
+        score-=1;
+        document.getElementById("score").innerHTML="Score: "+score;
+}
+function ans6r(){
+    synth=window.speechSynthesis;
+    utterThis=new SpeechSynthesisUtterance("Correct");
+        synth.speak(utterThis);
+        setTimeout('', 1200000);
+        document.getElementById("op1t").innerHTML="Vajarasana";
+        document.getElementById("op2t").innerHTML="Mayurasana";
+        document.getElementById("op3t").innerHTML="Surya Namaskar";
+        document.getElementById("op4t").innerHTML="Pranayam";
+        document.getElementById("quiz_q_text").innerHTML="What is breathing exersize called in yoga?";
+        document.getElementById("image").hidden="true";
+        document.getElementById("op1b").setAttribute( "onClick", "javascript: ans7w();" );
+        document.getElementById("op2b").setAttribute( "onClick", "javascript: ans7w();" );
+        document.getElementById("op3b").setAttribute( "onClick", "javascript: ans7w();" );
+        document.getElementById("op4b").setAttribute( "onClick", "javascript: ans7r();" );
+        score+=1;
+        document.getElementById("score").innerHTML="Score: "+score;
+}
+    
+function ans6w(){
+    synth=window.speechSynthesis;
+    utterThis=new SpeechSynthesisUtterance("O! O! Try Again");
+        synth.speak(utterThis);
+        score-=1;
+        document.getElementById("score").innerHTML="Score: "+score;
+}
+
+function ans7r(){
     synth=window.speechSynthesis;
     utterThis=new SpeechSynthesisUtterance("Correct");
         synth.speak(utterThis);
@@ -87,13 +168,17 @@ function ans4r(){
         document.getElementById("div_1").hidden="true";
         document.getElementById("me").hidden="false";
         synth=window.speechSynthesis;
-    utterThis=new SpeechSynthesisUtterance("Thank You Have a healthy day! Devloped By Advait Patel Class 7th A. TMS");
+    utterThis=new SpeechSynthesisUtterance("Thank You Have a healthy day! Devloped By Advait Patel Class 7th A TMS");
         synth.speak(utterThis);
+        score+=1;
+        document.getElementById("score").innerHTML="Score: "+score;
 }
     
-function ans4w(){
+function ans7w(){
     synth=window.speechSynthesis;
     utterThis=new SpeechSynthesisUtterance("O! O! Try Again");
         synth.speak(utterThis);
+        score-=1;
+        document.getElementById("score").innerHTML="Score: "+score;
         
 }
