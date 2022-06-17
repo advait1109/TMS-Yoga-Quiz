@@ -1,0 +1,31 @@
+body{
+    font-family: cursive;
+}
+#title_welcome{
+    font-family: cursive;
+}
+#my_button{
+    margin-top: 50px;
+}
+#start{
+    font-size: large;
+    font-family: cursive;
+}
+#quiz_question{
+    border: 0.25px solid black;
+    background-color: white;
+    font-family: cursive;
+    margin-top: 50px;
+    border-radius: 20px;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes example{
+    from{
+    box-shadow: 0.5px 0.5px 38px gray;
+}
+to{
+    box-shadow: 0.5px 0.5px 38px white;
+}
+}

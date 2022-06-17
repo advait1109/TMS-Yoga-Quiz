@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Yoga Celebration</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+
+    </head>
+    <body>
+        <center>
+            <div  class="col-xs-6 col-sm-6 col-md-12">
+            <button id="my_button" class="btn btn-info">
+            <h1 id="title_welcome">Welcome to Yoga Day Celebration!</h1>
+            </button><br><br>
+            <div id="hide_it">
+            <h6>Note: Click on Lets Go to Start</h6><br><br>
+            <button id="start" onclick="start_it()" class="btn btn-danger">Lets go!</button><br><br>
+            <img width="400" height="250" src="https://static.onecms.io/wp-content/uploads/sites/35/2019/04/16045733/benefits-yoga-fb.jpg"></div>
+            <img id="me" src="https://thumbs.dreamstime.com/b/woman-doing-yoga-text-thank-you-as-square-card-flat-vector-heart-shaped-stock-illustration-web-concept-gratitude-197700673.jpg" hidden="true">
+            <div hidden="true" id="div_1">
+            <button id="quiz_question">
+                <h2 id="quiz_q_text">Who Invented Yoga?</h2>
+                <br><br>
+                <img id="image" src="">
+            </button><br><br>
+            <button id="op1b" onclick="ans1w()">
+                <h2 id="op1t">Krishnamacharya</h2>
+            </button>
+            <button id="op2b" onclick="ans1w()">
+                <h2 id="op2t">Gautama Buddha</h2>
+            </button>
+            <button onclick="ans1r()" id="op3b">
+                <h2 id="op3t">Maharshi Patanjali</h2>
+            </button>
+            <button id="op4b" onclick="ans1w()">
+                <h2 id="op4t">Shankracharya</h2>
+            </button>
+        </div></div>
+        <br><br><br><h1 hidden="true">A</h1>
+        </center>
+    </body>
+</html>
