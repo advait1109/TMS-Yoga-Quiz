@@ -87,7 +87,7 @@ function ans4r(){
         document.getElementById("div_1").hidden="true";
         document.getElementById("me").hidden="false";
         synth=window.speechSynthesis;
-    utterThis=new SpeechSynthesisUtterance("Thank You Have a healthy day");
+    utterThis=new SpeechSynthesisUtterance("Thank You Have a healthy day! Devloped By Advait Patel Class 7th A. TMS");
         synth.speak(utterThis);
 }
     
